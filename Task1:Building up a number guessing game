@@ -1,0 +1,30 @@
+//Building up a number guessing game:) 
+/*Create a program that generates a random number and asks the
+user to guess it. Provide feedback on whether the guess is too
+high or too low until the user guesses the correct number.*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int num, guess, tries = 0;
+	num = rand() % 100 + 1; // generates a random number between 1 and 100 for example..
+	cout << "Number Guessing Game : Created By Vinit Singh\n\n";
+
+	do
+	{
+		cout << "Enter a guess between 1 and 100 : ";
+		cin >> guess;
+		tries++;
+
+		if (guess > num)
+			cout << "Too high!\n\n";
+		else if (guess < num)
+			cout << "Too low!\n\n";
+		else
+			cout << "\nCorrect! You got the right guess in " << tries << " guesses!\n";
+	} while (guess != num);
+
+	return 0;
+}
