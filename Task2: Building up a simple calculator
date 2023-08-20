@@ -1,0 +1,46 @@
+//Building up a simple calculator
+/*Develop a calculator program that performs basic arithmetic
+operations such as addition, subtraction, multiplication, and
+division. Allow the user to input two numbers and choose an
+operation to perform.*/
+
+# include <iostream>
+using namespace std;
+
+int main() {
+
+  char op;
+  float n1, n2;
+
+  cout << "Enter from one of the following operator: +, -, *, / : ";
+  cin >> op;
+
+  cout << "Enter any two operands: ";
+  cin >> n1 >> n2;
+
+  switch(op) {
+
+    case '+':
+      cout << n1 << " + " << n2 << " = " << n1 + n2;
+      break;
+
+    case '-':
+      cout << n1 << " - " << n2 << " = " << n1 - n2;
+      break;
+
+    case '*':
+      cout << n1 << " * " << n2 << " = " << n1 * n2;
+      break;
+
+    case '/':
+      cout << n1 << " / " << n2 << " = " << n1 / n2;
+      break;
+
+    default:
+      // If the operator is other than +, -, * or /, error message is shown in this task
+      cout << "Error! operator entered is not correct";
+      break;
+  }
+
+  return 0;
+}
